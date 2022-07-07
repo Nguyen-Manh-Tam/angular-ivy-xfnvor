@@ -1,3 +1,5 @@
+<!-- DATA & EVENT BINDING -->
+
 {{ name }}
 
 <!-- DATA BINDING -->
@@ -23,3 +25,18 @@
 <br />
 <br />
 <input type="text" [(ngModel)]="name" />
+
+<br />
+
+----------------------------------------------------------------------
+
+<!-- *NgIf -->
+<hello [name]="user.name" *ngIf="user.age >= 18"></hello>
+
+<div *ngIf="user.age < 18">ALO</div>
+
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{ user.age }}
+<button (click)="user.age = user.age + 1">+</button>
+
+----------------------------------------------------------------------
