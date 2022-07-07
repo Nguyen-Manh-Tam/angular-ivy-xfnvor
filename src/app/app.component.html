@@ -1,0 +1,25 @@
+{{ name }}
+
+<!-- DATA BINDING -->
+<!---- {{ exxpression }} -->
+<p>{{ user.name }}</p>
+<p>{{ user.age }}</p>
+
+<input type="text" [value]="user.name" />
+<!-- HTMLInputElement {
+  type: 'text'
+  value: 'abc',
+  attributes: [],
+  ...
+}
+ -->
+
+<!-- EVENT BINDING -->
+<button type="button" (click)="handler($event)">Click me</button>
+<br />
+<br />
+<!-- + cả 2 loại BINDING -->
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
+<br />
+<br />
+<input type="text" [(ngModel)]="name" />
